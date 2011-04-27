@@ -1,0 +1,211 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB51ADD913686439001CFCD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB51ADD813686439001CFCD6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB51ADD513686439001CFCD6 /* libCHSqlite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHSqlite.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB51ADD813686439001CFCD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB51ADDC13686439001CFCD6 /* CHSqlite-Prefix.pch */ = {isa = PBXFileReference; path = "CHSqlite-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB51ADD213686439001CFCD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB51ADD913686439001CFCD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB51ADCA13686439001CFCD6 = {
+			isa = PBXGroup;
+			children = (
+				FB51ADDA13686439001CFCD6 /* CHSqlite */,
+				FB51ADD713686439001CFCD6 /* Frameworks */,
+				FB51ADD613686439001CFCD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB51ADD613686439001CFCD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB51ADD513686439001CFCD6 /* libCHSqlite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB51ADD713686439001CFCD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB51ADD813686439001CFCD6 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB51ADDA13686439001CFCD6 /* CHSqlite */ = {
+			isa = PBXGroup;
+			children = (
+				FB51ADDB13686439001CFCD6 /* Supporting Files */,
+			);
+			path = CHSqlite;
+			sourceTree = "<group>";
+		};
+		FB51ADDB13686439001CFCD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB51ADDC13686439001CFCD6 /* CHSqlite-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FB51ADD313686439001CFCD6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FB51ADD413686439001CFCD6 /* CHSqlite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB51ADDF13686439001CFCD6 /* Build configuration list for PBXNativeTarget "CHSqlite" */;
+			buildPhases = (
+				FB51ADD113686439001CFCD6 /* Sources */,
+				FB51ADD213686439001CFCD6 /* Frameworks */,
+				FB51ADD313686439001CFCD6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHSqlite;
+			productName = CHSqlite;
+			productReference = FB51ADD513686439001CFCD6 /* libCHSqlite.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB51ADCC13686439001CFCD6 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FB51ADCF13686439001CFCD6 /* Build configuration list for PBXProject "CHSqlite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB51ADCA13686439001CFCD6;
+			productRefGroup = FB51ADD613686439001CFCD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB51ADD413686439001CFCD6 /* CHSqlite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB51ADD113686439001CFCD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FB51ADDD13686439001CFCD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB51ADDE13686439001CFCD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FB51ADE013686439001CFCD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CHSqlite.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB51ADE113686439001CFCD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CHSqlite.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB51ADCF13686439001CFCD6 /* Build configuration list for PBXProject "CHSqlite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB51ADDD13686439001CFCD6 /* Debug */,
+				FB51ADDE13686439001CFCD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB51ADDF13686439001CFCD6 /* Build configuration list for PBXNativeTarget "CHSqlite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB51ADE013686439001CFCD6 /* Debug */,
+				FB51ADE113686439001CFCD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB51ADCC13686439001CFCD6 /* Project object */;
+}
