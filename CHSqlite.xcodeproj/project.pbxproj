@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FB51ADD913686439001CFCD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB51ADD813686439001CFCD6 /* Foundation.framework */; };
-		FB51ADEA13686471001CFCD6 /* CHSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE213686471001CFCD6 /* CHSqliteDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB51ADEA13686471001CFCD6 /* CHSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE213686471001CFCD6 /* CHSqliteDB.h */; settings = {ATTRIBUTES = (); }; };
 		FB51ADEB13686471001CFCD6 /* CHSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51ADE313686471001CFCD6 /* CHSqliteDB.m */; };
-		FB51ADEC13686471001CFCD6 /* DBRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE413686471001CFCD6 /* DBRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB51ADEC13686471001CFCD6 /* DBRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE413686471001CFCD6 /* DBRecord.h */; settings = {ATTRIBUTES = (); }; };
 		FB51ADED13686471001CFCD6 /* DBRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51ADE513686471001CFCD6 /* DBRecord.m */; };
-		FB51ADEE13686471001CFCD6 /* ObjSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE613686471001CFCD6 /* ObjSqliteDB.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FB51ADEE13686471001CFCD6 /* ObjSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE613686471001CFCD6 /* ObjSqliteDB.h */; settings = {ATTRIBUTES = (); }; };
 		FB51ADEF13686471001CFCD6 /* ObjSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51ADE713686471001CFCD6 /* ObjSqliteDB.m */; };
-		FB51ADF013686471001CFCD6 /* ObjSqliteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE813686471001CFCD6 /* ObjSqliteStatement.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FB51ADF013686471001CFCD6 /* ObjSqliteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = FB51ADE813686471001CFCD6 /* ObjSqliteStatement.h */; settings = {ATTRIBUTES = (); }; };
 		FB51ADF113686471001CFCD6 /* ObjSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51ADE913686471001CFCD6 /* ObjSqliteStatement.m */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,8 @@
 		FB51ADE713686471001CFCD6 /* ObjSqliteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteDB.m; sourceTree = "<group>"; };
 		FB51ADE813686471001CFCD6 /* ObjSqliteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjSqliteStatement.h; sourceTree = "<group>"; };
 		FB51ADE913686471001CFCD6 /* ObjSqliteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteStatement.m; sourceTree = "<group>"; };
+		FBDF973D1378166A0092F1CA /* update_library_reference.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update_library_reference.sh; sourceTree = "<group>"; };
+		FBDF973E1378166A0092F1CA /* mergeArmSymbols.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mergeArmSymbols.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FB51ADDC13686439001CFCD6 /* CHSqlite-Prefix.pch */,
+				FBDF973D1378166A0092F1CA /* update_library_reference.sh */,
+				FBDF973E1378166A0092F1CA /* mergeArmSymbols.sh */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,10 +112,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB51ADEA13686471001CFCD6 /* CHSqliteDB.h in Headers */,
-				FB51ADEC13686471001CFCD6 /* DBRecord.h in Headers */,
 				FB51ADEE13686471001CFCD6 /* ObjSqliteDB.h in Headers */,
 				FB51ADF013686471001CFCD6 /* ObjSqliteStatement.h in Headers */,
+				FB51ADEA13686471001CFCD6 /* CHSqliteDB.h in Headers */,
+				FB51ADEC13686471001CFCD6 /* DBRecord.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +129,7 @@
 				FB51ADD113686439001CFCD6 /* Sources */,
 				FB51ADD213686439001CFCD6 /* Frameworks */,
 				FB51ADD313686439001CFCD6 /* Headers */,
+				FBDF973C137811600092F1CA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,6 +162,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FBDF973C137811600092F1CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/CHSqlite/mergeArmSymbols.sh\"\n\"$SRCROOT/CHSqlite/update_library_reference.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB51ADD113686439001CFCD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,15 +197,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 i386";
+				WARNING_CFLAGS = "-Wno-idiomatic-parentheses";
 			};
 			name = Debug;
 		};
@@ -192,12 +214,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 i386";
+				WARNING_CFLAGS = "-Wno-idiomatic-parentheses";
 			};
 			name = Release;
 		};
@@ -208,7 +232,10 @@
 				DSTROOT = /tmp/CHSqlite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -221,7 +248,10 @@
 				DSTROOT = /tmp/CHSqlite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -246,6 +276,7 @@
 				FB51ADE113686439001CFCD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

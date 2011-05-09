@@ -204,12 +204,13 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
 #endif          
                 if([statement textFromColumn:i]){
                     [newTmp addObject:[statement textFromColumn:i]];
+                }else{
+                    [newTmp addObject:@""];
                 }
             } else if( [[element valueForKey:@"type"] isEqualToString:@"INTEGER"] ) {
 #ifdef DB_DEBUG_DETAIL                 
                 NSLog(@">> INT(%d): %@ |%d|",i, [element valueForKey:@"name"],[statement intFromColumn:i]);
 #endif                
-
                 [newTmp addObject:[NSNumber numberWithInt:[statement intFromColumn:i]] ];                
             }
             i++;
@@ -220,6 +221,7 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
         [newTmp release];
 //        [new release];
     }
+
     [statement release];
     statement = nil;    
     

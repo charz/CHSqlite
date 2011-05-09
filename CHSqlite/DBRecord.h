@@ -13,6 +13,13 @@
     
 }
 
-+(NSString *) tableName;
++ (NSString *) tableName;
++ (NSString *) tablePrimaryKey;
++ (NSInteger) tablePrimaryKeyByIndex;
++ (NSArray *) tableElements;
++ (DBRecord *) recordWithArray:(NSArray *) array;
+- (void) dumpRecord;
+- (NSArray *) arrayWithRecord:(DBRecord *)rec;
+- (id) initWithArray: (NSArray *) content;
 
 @end
