@@ -258,7 +258,9 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
 #endif          
                 if([statement textFromColumn:i]){
                     [newTmp addObject:[statement textFromColumn:i]];
-                }
+                }else{
+                    [newTmp addObject:@""];
+                }                
             } else if( [[element valueForKey:@"type"] isEqualToString:@"INTEGER"] ) {
 #ifdef DB_DEBUG_DETAIL                 
                 NSLog(@">> %@ |%d|", [element valueForKey:@"name"],[statement intFromColumn:i]);
