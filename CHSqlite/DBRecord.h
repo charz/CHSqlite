@@ -10,7 +10,12 @@
 
 
 @interface DBRecord : NSObject {
-    
+//    NSNumber *wType;;    
+//    NSString *wId;
+//    NSNumber *wSeason;
+//    NSNumber *wOccasion;
+//    NSNumber *wFavorite;
+//    NSNumber *wCount;    
 }
 
 + (NSString *) tableName;
