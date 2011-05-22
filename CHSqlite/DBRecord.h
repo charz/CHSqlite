@@ -27,4 +27,7 @@
 - (NSArray *) arrayWithRecord:(DBRecord *)rec;
 - (id) initWithArray: (NSArray *) content;
 
+// DBRecord.m, initial method
+
+
 @end
