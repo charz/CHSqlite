@@ -32,7 +32,7 @@ export ALREADYINVOKED="true"
 
 lib_name="${EXECUTABLE_PREFIX}${PRODUCT_NAME}.${EXECUTABLE_EXTENSION}"
 lib_base_name="$(echo $lib_name | awk -F '-' '{print $1}')"
-dest_lib_root="${SRCROOT}/CHSqlite"
+dest_lib_root="${SRCROOT}/"
 #dest_package_root="${SRCROOT}/CHSqlite"
 
 echo "remove old library $lib_base_name*.${EXECUTABLE_EXTENSION}"
