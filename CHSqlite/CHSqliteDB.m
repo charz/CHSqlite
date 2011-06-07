@@ -54,8 +54,13 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
 #endif            
             [self createTable:obj];        
         } else {
-            NSString *resourcePath = [ [NSBundle mainBundle] resourcePath];
+            NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
             NSString *filePath  = [resourcePath stringByAppendingPathComponent:dbName];
+            if ( ! [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){
+                // not exist
+                filePath = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],dbName];
+            }
+            
             dbPath = [[NSString alloc] initWithString: filePath];
 //            NSLog(@" DB(ro) Path: %@\n",  dbPath);
 #ifdef DB_DEBUG
