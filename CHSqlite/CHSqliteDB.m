@@ -46,25 +46,29 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
             dbName = [NSString stringWithString:kdefaultDB];
         }
 
+        dbPath = [[NSString alloc] initWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],dbName];        
         if (!readonly) {
-            dbPath = [[NSString alloc] initWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],dbName];
 //            NSLog(@" DB(rw) Path: %@\n", dbPath);     
 #ifdef DB_DEBUG
-            NSLog(@"Init DB: %@", dbName);            
+            NSLog(@"Init DB(rw): %@", dbName);            
 #endif            
             [self createTable:obj];        
         } else {
             NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
             NSString *filePath  = [resourcePath stringByAppendingPathComponent:dbName];
-            if ( ! [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){
-                // not exist
-                filePath = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],dbName];
+            if ( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){                
+                // file exist, move it to documents/ directory
+                NSError *err;
+                [[NSFileManager defaultManager] copyItemAtPath:filePath 
+                                                        toPath:dbPath 
+                                                         error:&err];                
+            } else {
+                NSLog(@">>>> No such DB file: %@", filePath);
             }
             
-            dbPath = [[NSString alloc] initWithString: filePath];
 //            NSLog(@" DB(ro) Path: %@\n",  dbPath);
 #ifdef DB_DEBUG
-            NSLog(@"Open DB: %@", dbName);            
+            NSLog(@"Open DB(ro): %@", dbName);            
 #endif            
         }
     }
