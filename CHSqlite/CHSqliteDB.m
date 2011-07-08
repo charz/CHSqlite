@@ -53,15 +53,17 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
             NSLog(@"Init DB(rw): %@", dbName);            
 #endif            
             [self createTable:obj];        
-        } else {
+        } else {                  
             NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
             NSString *filePath  = [resourcePath stringByAppendingPathComponent:dbName];
             if ( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){                
                 // file exist, move it to documents/ directory
-                NSError *err;
+                NSError *rErr=nil, *cErr=nil;
+                [[NSFileManager defaultManager] removeItemAtPath:dbPath error:&rErr];                            
                 [[NSFileManager defaultManager] copyItemAtPath:filePath 
                                                         toPath:dbPath 
-                                                         error:&err];                
+                                                         error:&cErr];                
+                NSLog(@"DB r: %@, c: %@ ", [rErr localizedDescription], [cErr localizedDescription]);                            
             } else {
                 NSLog(@">>>> No such DB file: %@", filePath);
             }
