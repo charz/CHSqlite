@@ -25,20 +25,19 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
 @synthesize dbPath,dbName;
 
 #ifdef DB_DEBUG
-- (void) showDocumentsFile {
-	CFShow([[NSFileManager defaultManager] directoryContentsAtPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]]);	
+- (void) showLibrary/CachesFile {
+	CFShow([[NSFileManager defaultManager] directoryContentsAtPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"]]);	
 }
 #endif
 
 #pragma mark -
 #pragma mark CHSqliteDB initial function
+
 - (id) init {
     return [self init:kdefaultDB withTable:[DBRecord class] readOnly:YES];
 }
 
-
 - (id) init:(NSString *)db withTable:(Class)obj readOnly:(BOOL)readonly{    
-    
     if ((self = [super init]) != nil ){
         if (db) {
             dbName = [NSString stringWithString:db];
@@ -46,7 +45,7 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
             dbName = [NSString stringWithString:kdefaultDB];
         }
 
-        dbPath = [[NSString alloc] initWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],dbName];        
+        dbPath = [[NSString alloc] initWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"],dbName];        
         if (!readonly) {
 //            NSLog(@" DB(rw) Path: %@\n", dbPath);     
 #ifdef DB_DEBUG
@@ -57,15 +56,19 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
             NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
             NSString *filePath  = [resourcePath stringByAppendingPathComponent:dbName];
             if ( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){                
-                // file exist, move it to documents/ directory
+                // file exist, move it to Library/Caches/ directory
                 NSError *rErr=nil, *cErr=nil;
                 [[NSFileManager defaultManager] removeItemAtPath:dbPath error:&rErr];                            
                 [[NSFileManager defaultManager] copyItemAtPath:filePath 
                                                         toPath:dbPath 
-                                                         error:&cErr];                
+                                                         error:&cErr]; 
+#ifdef DB_DEBUG                
                 NSLog(@"DB r: %@, c: %@ ", [rErr localizedDescription], [cErr localizedDescription]);                            
+#endif                
             } else {
+#ifdef DB_DEBUG                       
                 NSLog(@">>>> No such DB file: %@", filePath);
+#endif                
             }
             
 //            NSLog(@" DB(ro) Path: %@\n",  dbPath);
@@ -76,6 +79,7 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
     }
     return self;
 }
+
 
 - (void)dealloc {
 
@@ -398,7 +402,7 @@ static NSString* kTableNameWithSelectValue = @"SELECT * FROM %@ WHERE %@ = ?;";
 #ifdef DB_DEBUG        
     // Update rds Counter
     NSLog(@"After Add REC: %d", [self queryTableCount:obj]);
-    [self showDocumentsFile];    
+    [self showLibrary/CachesFile];    
 #endif    
     
 }

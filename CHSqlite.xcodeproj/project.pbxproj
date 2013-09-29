@@ -23,7 +23,7 @@
 		FB51ADD813686439001CFCD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB51ADDC13686439001CFCD6 /* CHSqlite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHSqlite-Prefix.pch"; sourceTree = "<group>"; };
 		FB51ADE213686471001CFCD6 /* CHSqliteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSqliteDB.h; sourceTree = "<group>"; };
-		FB51ADE313686471001CFCD6 /* CHSqliteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSqliteDB.m; sourceTree = "<group>"; };
+		FB51ADE313686471001CFCD6 /* CHSqliteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CHSqliteDB.m; sourceTree = "<group>"; };
 		FB51ADE413686471001CFCD6 /* DBRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecord.h; sourceTree = "<group>"; };
 		FB51ADE513686471001CFCD6 /* DBRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecord.m; sourceTree = "<group>"; };
 		FB51ADE613686471001CFCD6 /* ObjSqliteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjSqliteDB.h; sourceTree = "<group>"; };
@@ -145,6 +145,9 @@
 /* Begin PBXProject section */
 		FB51ADCC13686439001CFCD6 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = FB51ADCF13686439001CFCD6 /* Build configuration list for PBXProject "CHSqlite" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -200,12 +203,12 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 i386 armv7s";
 				WARNING_CFLAGS = "-Wno-idiomatic-parentheses";
 			};
 			name = Debug;
@@ -215,12 +218,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 i386 armv7s";
 				WARNING_CFLAGS = "-Wno-idiomatic-parentheses";
 			};
 			name = Release;
@@ -229,6 +232,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CHSqlite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
@@ -245,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CHSqlite.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHSqlite/CHSqlite-Prefix.pch";
